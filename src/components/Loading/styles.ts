@@ -11,3 +11,7 @@ export const Container = styled.View`
 export const LoadingIndicator = styled.ActivityIndicator.attrs(({ theme }) => ({
   color: theme.COLORS.GREEN_700,
 }))``;
+
+export const subtitle = styled.Text`
+  color: #fff;
+`;
