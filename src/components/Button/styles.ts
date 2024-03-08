@@ -1,5 +1,5 @@
 import { TouchableOpacity } from "react-native";
-import styled from "styled-components/native";
+import styled, { css } from "styled-components/native";
 
 export type ButtonTypeStyleProps = "PRIMARY" | "SECONDARY";
 
@@ -23,9 +23,11 @@ export const Container = styled(TouchableOpacity)<Props>`
 `;
 
 export const Title = styled.Text`
-  font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
-  color: ${({ theme }) => theme.COLORS.WHITE};
-  font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
+  ${({ theme }) => css`
+    font-size: ${theme.FONT_SIZE.MD}px;
+    color: ${theme.COLORS.WHITE};
+    font-family: ${theme.FONT_FAMILY.BOLD};
+  `}
 `;
 //hack pra prevenir se em algum componente que va utilizar esse comp estilizado tenha algum flex ou algo assim que faça que o componente estique ou creça.
 
