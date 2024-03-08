@@ -9,7 +9,7 @@ export const Container = styled(TextInput)`
 
   border-radius: 4px;
   padding: 16px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 
   /* ANTES: */
   /* background-color: ${({ theme }) => theme.COLORS.GRAY_700};
