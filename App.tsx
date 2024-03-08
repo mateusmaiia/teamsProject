@@ -7,7 +7,7 @@ import {
 } from "@expo-google-fonts/roboto";
 import { Loading } from "./src/components/Loading";
 import themeSS from "./src/theme/themeSS";
-import Groups from "./src/screens/Groups";
+import { Groups } from "./src/screens/Groups";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
