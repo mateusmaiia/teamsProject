@@ -12,7 +12,7 @@ export const Content = styled.View`
   flex: 1;
   justify-content: center;
 
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
 `;
 
 export const Icon = styled(UsersThree).attrs(({ theme }) => ({
