@@ -8,6 +8,7 @@ import { Container, Form, HeaderList } from "./styles";
 import { useState } from "react";
 import { NumbersOfPlayer } from "../../components/Filter/styles";
 import { PlayCard } from "../../components/Playcard";
+import { Button } from "../../components/Button";
 
 export function Players() {
   const [team, setTeam] = useState("Time A");
@@ -46,6 +47,8 @@ export function Players() {
         keyExtractor={(item) => item}
         renderItem={({ item }) => <PlayCard onRemove={() => {}} name={item} />}
       />
+
+      <Button title="Remover" typeButton="SECONDARY" />
     </Container>
   );
 }
