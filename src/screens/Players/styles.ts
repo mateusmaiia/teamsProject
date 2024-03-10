@@ -15,3 +15,12 @@ export const Form = styled.View`
   border-radius: 6px;
   justify-content: center;
 `;
+
+export const HeaderList = styled.View`
+  width: 100%;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 32px 0 12px;
+`;
