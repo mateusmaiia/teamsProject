@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";
@@ -6,10 +7,14 @@ import { Input } from "../../components/Input";
 import { Container, Content, Icon } from "./styles";
 
 export function NewGroup() {
+  const [group, setGroup] = useState("");
   const navigate = useNavigation();
 
   function handleNewGroup() {
-    navigate.navigate("players", { group: "player1" });
+    navigate.navigate("players", { group: group });
+    {
+      /**ou posso passar somente {group} o js entende que o nome da propriedade é group e o nome do estado tambem */
+    }
   }
   return (
     <Container>
@@ -20,7 +25,7 @@ export function NewGroup() {
           title="Nova turma"
           subtitle="Crie a turma para adicionar as pessoas"
         />
-        <Input placeholder="Nome da turma" />
+        <Input placeholder="Nome da turma" onChangeText={setGroup} />
         <Button title="Criar" onPress={handleNewGroup} />
       </Content>
     </Container>
