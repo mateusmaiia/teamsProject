@@ -5,15 +5,18 @@ import { Header } from "../../components/Header";
 import { Highlight } from "../../components/Highlight";
 import { Input } from "../../components/Input";
 import { Container, Content, Icon } from "./styles";
+import { groupCreate } from "../../storage/group/groupCreate";
 
 export function NewGroup() {
   const [group, setGroup] = useState("");
   const navigate = useNavigation();
 
-  function handleNewGroup() {
-    navigate.navigate("players", { group: group });
-    {
-      /**ou posso passar somente {group} o js entende que o nome da propriedade é group e o nome do estado tambem */
+  async function handleNewGroup() {
+    try {
+      await groupCreate(group);
+      navigate.navigate("players", { group: group });
+    } catch (error) {
+      throw error;
     }
   }
   return (
