@@ -18,7 +18,7 @@ type RouteParams = {
 
 export function Players() {
   const [team, setTeam] = useState("Time A");
-  const [players, setPlayers] = useState(["oi", "oi", "oi", "oi"]);
+  const [players, setPlayers] = useState(["oi", "eai"]);
 
   //pega os parâmetros passado por rota para esse componente
   const route = useRoute();
