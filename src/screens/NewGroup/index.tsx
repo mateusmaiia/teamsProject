@@ -6,7 +6,7 @@ import { Highlight } from "../../components/Highlight";
 import { Input } from "../../components/Input";
 import { Container, Content, Icon } from "./styles";
 import { groupCreate } from "../../storage/group/groupCreate";
-import { AppError } from "../../utils/appError";
+import { AppError } from "../../utils/AppError";
 import { Alert } from "react-native";
 
 export function NewGroup() {
